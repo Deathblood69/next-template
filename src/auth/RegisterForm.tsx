@@ -3,18 +3,14 @@
 import {useActionState} from 'react'
 import {useFormStatus} from 'react-dom'
 import {signup} from '@/actions/auth'
+import FormField from "@/components/FormField";
 
-export function SignupForm() {
+export function RegisterForm() {
     const [state, action] = useActionState(signup, undefined)
 
     return (
         <form action={action}>
-            <div>
-                <label htmlFor="name">Name</label>
-                <input id="name" name="name" placeholder="Name"/>
-            </div>
-            {state?.errors?.name && <p>{state.errors.name}</p>}
-
+            <FormField id={'name'} label={"Name"} placeholder={"username of user"} errors={state?.errors?.name}/>
             <div>
                 <label htmlFor="email">Email</label>
                 <input id="email" name="email" placeholder="Email"/>

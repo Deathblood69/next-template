@@ -4,19 +4,17 @@
       "id": "1",
       "username": "John Doe",
       "email": "john.doe@example.com",
-      "password": "$2a$10$4FK8JNhoKxQrFLyfy1vX8.UYc3LF0dRQGiBObeipQcS07v11ISI.W"
+      "password": "$2a$10$4FK8JNhoKxQrFLyfy1vX8.UYc3LF0dRQGiBObeipQcS07v11ISI.W",
+      "role": "admin",
+      "team": "team1"
     },
     {
-      "id": "c7cc",
+      "id": "2",
       "name": "Maximus Crowe",
       "email": "rompass@hotmail.fr",
-      "password": "$2a$10$WXlam5cxx3f/JO9GJlTT/e7qEaOB2chCUjL26VQaR9jT8iJg8tPwW"
-    },
-    {
-      "id": "5bb7",
-      "name": "Maximus Crowe",
-      "email": "rompass@hotmail.fr",
-      "password": "$2a$10$2wBhc4sAWB8blTKxXHX0kOeYxeoAMfFb3RY89857Oa7Vb/SyqkuOi"
+      "password": "$2a$10$WXlam5cxx3f/JO9GJlTT/e7qEaOB2chCUjL26VQaR9jT8iJg8tPwW",
+      "role": "user",
+      "team": "team1"
     }
   ]
 }

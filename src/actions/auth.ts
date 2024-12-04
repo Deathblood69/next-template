@@ -4,6 +4,7 @@ import {FormState, SignupFormSchema} from '@/lib/definitions'
 import {hashSync} from "bcrypt-ts";
 import {createSession, deleteSession} from "@/lib/session";
 import {redirect} from "next/navigation";
+import {UserSession} from "@/types/UserSession";
 
 export async function signup(state: FormState, formData: FormData) {
     // 1. Validate form fields
@@ -44,7 +45,8 @@ export async function signup(state: FormState, formData: FormData) {
     }
 
     // 4. Create user session
-    await createSession('1')
+    const user = await response.json() as UserSession
+    await createSession({id: user.id, role: user.role})
 
     // 5. Redirect user
     redirect('/profile')

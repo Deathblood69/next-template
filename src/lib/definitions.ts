@@ -1,4 +1,5 @@
 import {z} from 'zod'
+import {UserSession} from "@/types/UserSession";
 
 export const SignupFormSchema = z.object({
     name: z
@@ -30,6 +31,6 @@ export type FormState =
 
 
 export type SessionPayload = {
-    userId: string
+    user: UserSession
     expiresAt: Date
 }
