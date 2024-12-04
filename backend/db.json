@@ -1,0 +1,16 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "John Doe",
+      "email": "john.doe@example.com",
+      "password": "$2a$10$4FK8JNhoKxQrFLyfy1vX8.UYc3LF0dRQGiBObeipQcS07v11ISI.W"
+    },
+    {
+      "id": "c7cc",
+      "name": "Maximus Crowe",
+      "email": "rompass@hotmail.fr",
+      "password": "$2a$10$WXlam5cxx3f/JO9GJlTT/e7qEaOB2chCUjL26VQaR9jT8iJg8tPwW"
+    }
+  ]
+}
