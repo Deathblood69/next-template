@@ -7,6 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "prettier": "npx prettier . --write",
+    "prettier:check": "npx prettier . --check",
+    "prepare": "husky",
     "backend": "json-server --watch backend/db.json --port 8080"
   },
   "dependencies": {
@@ -26,6 +29,12 @@
     "@types/react-dom": "^18",
     "eslint": "^8",
     "eslint-config-next": "15.0.3",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.2.10",
+    "prettier": "3.4.2",
     "typescript": "^5"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
   }
 }
