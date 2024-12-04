@@ -1,5 +1,9 @@
-import {FormState, SignupFormSchema} from '@/app/lib/definitions'
+'use server'
+
+import {FormState, SignupFormSchema} from '@/lib/definitions'
 import {hashSync} from "bcrypt-ts";
+import {createSession, deleteSession} from "@/lib/session";
+import {redirect} from "next/navigation";
 
 export async function signup(state: FormState, formData: FormData) {
     // 1. Validate form fields
@@ -21,8 +25,6 @@ export async function signup(state: FormState, formData: FormData) {
     // e.g. Hash the user's password before storing it
     const hashedPassword = hashSync(password, 10)
 
-    console.log(name, email, hashedPassword)
-
     const response = await fetch('http://localhost:8080/users', {
         method: 'POST',
         headers: {
@@ -41,7 +43,14 @@ export async function signup(state: FormState, formData: FormData) {
         }
     }
 
-    // TODO:
     // 4. Create user session
+    await createSession('1')
+
     // 5. Redirect user
+    redirect('/profile')
+}
+
+export async function logout() {
+    await deleteSession()
+    redirect('/login')
 }

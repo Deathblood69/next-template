@@ -2,7 +2,7 @@
 
 import {useActionState} from 'react'
 import {useFormStatus} from 'react-dom'
-import {signup} from '@/app/actions/auth'
+import {signup} from '@/actions/auth'
 
 export function SignupForm() {
     const [state, action] = useActionState(signup, undefined)
