@@ -1,47 +1,43 @@
 'use client'
 
-import {useActionState} from 'react'
-import {useFormStatus} from 'react-dom'
-import {signup} from '@/actions/auth'
-import FormField from "@/components/FormField";
+import {Fragment, useActionState} from 'react'
+import AppFormField from '@/components/AppFormField'
+import AppSubmitButton from '@/components/AppSubmitButton'
+import {register} from '@/auth/actions/register'
 
 export function RegisterForm() {
-    const [state, action] = useActionState(signup, undefined)
+  const [state, action] = useActionState(register, undefined)
 
-    return (
-        <form action={action}>
-            <FormField id={'name'} label={"Name"} placeholder={"username of user"} errors={state?.errors?.name}/>
-            <div>
-                <label htmlFor="email">Email</label>
-                <input id="email" name="email" placeholder="Email"/>
-            </div>
-            {state?.errors?.email && <p>{state.errors.email}</p>}
-
-            <div>
-                <label htmlFor="password">Password</label>
-                <input id="password" name="password" type="password"/>
-            </div>
-            {state?.errors?.password && (
-                <div>
-                    <p>Password must:</p>
-                    <ul>
-                        {state.errors.password.map((error) => (
-                            <li key={error}>- {error}</li>
-                        ))}
-                    </ul>
-                </div>
-            )}
-            <SubmitButton/>
-        </form>
-    )
-}
-
-function SubmitButton() {
-    const {pending} = useFormStatus()
-
-    return (
-        <button disabled={pending} type="submit">
-            Sign Up
-        </button>
-    )
+  return (
+    <Fragment>
+      <h1>Register</h1>
+      <form action={action}>
+        <AppFormField
+          id={'name'}
+          label={'Name'}
+          placeholder={'Username'}
+          errors={state?.errors?.name}
+        />
+        <AppFormField
+          id={'email'}
+          label={'Email'}
+          placeholder={'Email'}
+          type={'email'}
+          errors={state?.errors?.email}
+        />
+        <AppFormField
+          id={'password'}
+          label={'Password'}
+          placeholder={'Password'}
+          type={'password'}
+          errors={state?.errors?.password}
+        />
+        <AppSubmitButton
+          label={'Sign Up'}
+          type={'submit'}
+        />
+        <p>{state?.message}</p>
+      </form>
+    </Fragment>
+  )
 }

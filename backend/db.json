@@ -4,17 +4,43 @@
       "id": "1",
       "username": "John Doe",
       "email": "john.doe@example.com",
-      "password": "$2a$10$4FK8JNhoKxQrFLyfy1vX8.UYc3LF0dRQGiBObeipQcS07v11ISI.W",
-      "role": "admin",
-      "team": "team1"
+      "password": "$2a$10$fMIDGq2/P6LX1T1l/TARye3pqTlrqYfUNsrc52RxCdJ79HviUygSy",
+      "role": "admin"
     },
     {
-      "id": "2",
-      "name": "Maximus Crowe",
+      "id": "fb3d",
+      "name": "Test",
       "email": "rompass@hotmail.fr",
-      "password": "$2a$10$WXlam5cxx3f/JO9GJlTT/e7qEaOB2chCUjL26VQaR9jT8iJg8tPwW",
-      "role": "user",
-      "team": "team1"
+      "password": "$2a$10$Ldsf1DwnxcQDEWq8NItsFeLarjpZdGFqnT1rRBzYnnNxFQYT5WD7m",
+      "role": "null"
+    },
+    {
+      "id": "bc5e",
+      "name": "Maximus",
+      "email": "rompass@hotmail.fr",
+      "password": "$2a$10$jS0KWfjJuPMzz52Ke2AvZe16O05cDI0e2mm/XxoRrU6dAuTVgUa0S",
+      "role": "null"
+    },
+    {
+      "id": "77ea",
+      "name": "Maximus",
+      "email": "test@gmail.com",
+      "password": "$2a$10$U.xxkpJ8vr5Mg.emkiWg8uc0j638UKpH/hF0AoZMxRtKCFFiLjtRa",
+      "role": "null"
+    },
+    {
+      "id": "3498",
+      "name": "Maximus",
+      "email": "test@gmail.com",
+      "password": "$2a$10$NX4Gq04x7dIwMKpayIqhD.c4VCe3BLIfepBr99pMWWMBlW/fQx/u2",
+      "role": "null"
+    },
+    {
+      "id": "9f4e",
+      "name": "Maximus",
+      "email": "rompass@hotmail.fr",
+      "password": "$2a$10$RJoW4sv5QZFZ/gaXf2uiCeJDw9zRdQ28IepelhaaoxfQxg4FNWeE.",
+      "role": "null"
     }
   ]
 }

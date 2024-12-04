@@ -1,5 +1,9 @@
+import {Fragment} from 'react'
+
 export default function UserDashboard() {
-    return (
-        <h1>UserDashboard</h1>
-    )
+  return (
+    <Fragment>
+      <h1>UserDashboard</h1>
+    </Fragment>
+  )
 }

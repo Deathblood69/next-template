@@ -1,5 +1,9 @@
+import {Fragment} from 'react'
+
 export default function AdminDashboard() {
-    return (
-        <h1>AdminDashboard</h1>
-    )
+  return (
+    <Fragment>
+      <h1>AdminDashboard</h1>
+    </Fragment>
+  )
 }
