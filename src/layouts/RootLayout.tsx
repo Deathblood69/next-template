@@ -1,7 +1,6 @@
 import '../assets/styles/globals.css'
 import type {Metadata} from 'next'
 import {ReactNode} from 'react'
-import {geistMono, geistSans} from '@/assets/fonts/fonts'
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -15,9 +14,7 @@ interface Props {
 export default function RootLayout({children}: Props) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   )
 }

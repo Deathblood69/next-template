@@ -1,4 +1,5 @@
-import {getSession, verifySession} from '@/utils/session'
+import {verifySession} from '@/utils/session/verifySession'
+import {getSession} from '@/utils/session/getSession'
 import {redirect} from 'next/navigation'
 import AdminDashboard from '@/domains/dahsboard/AdminDashboard'
 import UserDashboard from '@/domains/dahsboard/UserDashboard'

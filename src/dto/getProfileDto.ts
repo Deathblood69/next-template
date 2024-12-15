@@ -1,13 +1,8 @@
-import 'server-only'
-import {getUser} from '@/utils/dal'
+import {getSession} from '@/utils/session/getSession'
+import {getUser} from '@/dal/getUser'
 import {UserEntity} from '@/domains/user/user.entity'
-import {getSession} from '@/utils/session'
 
-function canSeeRole(viewer: UserEntity, team: string) {
-  return viewer.role === 'admin' || team === viewer.team
-}
-
-export async function getProfileDTO(id?: string) {
+export default async function getProfileDTO(id?: string) {
   const session = await getSession()
 
   if (!session?.user?.id) {
@@ -29,4 +24,8 @@ export async function getProfileDTO(id?: string) {
       role: phoneNumber
     }
   }
+}
+
+function canSeeRole(viewer: UserEntity, team: string) {
+  return viewer.role === 'admin' || team === viewer.team
 }

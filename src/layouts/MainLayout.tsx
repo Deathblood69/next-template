@@ -1,7 +1,7 @@
 import {Fragment, ReactNode} from 'react'
 import Link from 'next/link'
 import {Paths} from '@/constants/paths'
-import {verifySession} from '@/utils/session'
+import {verifySession} from '@/utils/session/verifySession'
 
 interface Props {
   children: ReactNode

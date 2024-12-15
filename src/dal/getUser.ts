@@ -1,7 +1,6 @@
-import 'server-only'
-
 import {cache} from 'react'
-import {getSession, verifySession} from '@/utils/session'
+import {verifySession} from '@/utils/session/verifySession'
+import {getSession} from '@/utils/session/getSession'
 import {UserEntity} from '@/domains/user/user.entity'
 
 export const getUser = cache(async (id: string) => {

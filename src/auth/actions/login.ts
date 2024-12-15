@@ -1,6 +1,6 @@
 'use server'
 
-import {createSession, updateSession, verifySession} from '@/utils/session'
+import {verifySession} from '@/utils/session/verifySession'
 import {redirect} from 'next/navigation'
 import {parseFormData} from '@/utils/parseFormData'
 import {validateFormService} from '@/composable/validateFormService'
@@ -15,6 +15,8 @@ import {UserSession} from '@/types/UserSession'
 import {CredentialsEntity} from '@/auth/types/credentials/credentials.entity'
 import {CredentialFormState} from '@/auth/types/credentials/credentials.state'
 import {CredentialsFormSchema} from '@/auth/types/credentials/credentials.schema'
+import createSession from '@/utils/session/createSession'
+import {updateSession} from '@/utils/session/updateSession'
 
 /**
  * Server action to handle user login

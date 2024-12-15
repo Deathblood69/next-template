@@ -1,6 +1,6 @@
 'use server'
 
-import {deleteSession} from '@/utils/session'
+import {deleteSession} from '@/utils/session/deleteSession'
 import {redirect} from 'next/navigation'
 import {Paths} from '@/constants/paths'
 import {Messages} from '@/constants/messages'

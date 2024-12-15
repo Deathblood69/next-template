@@ -1,5 +1,5 @@
-import {getProfileDTO} from '@/utils/dto'
 import {Fragment} from 'react'
+import getProfileDTO from '@/dto/getProfileDto'
 
 export default async function ProfileView() {
   const profile = await getProfileDTO()
