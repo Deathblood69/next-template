@@ -1,13 +1,10 @@
-import {Fragment, ReactNode} from 'react'
+import {Fragment} from 'react'
 import Link from 'next/link'
 import {Paths} from '@/constants/paths'
 import {verifySession} from '@/utils/session/verifySession'
+import {AppProps} from '@/types/AppProps'
 
-interface Props {
-  children: ReactNode
-}
-
-export default async function MainLayout({children}: Props) {
+export default async function MainLayout({children}: AppProps) {
   const connected = await verifySession()
 
   return (

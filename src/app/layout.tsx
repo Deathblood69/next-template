@@ -1,10 +1,6 @@
-import {ReactNode} from 'react'
+import {AppProps} from '@/types/AppProps'
 import RootLayout from '@/layouts/RootLayout'
 
-interface Props {
-  children: ReactNode
-}
-
-export default function Layout({children}: Props) {
+export default function Layout({children}: AppProps) {
   return <RootLayout>{children}</RootLayout>
 }
