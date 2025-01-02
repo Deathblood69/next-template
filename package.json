@@ -9,23 +9,40 @@
     "lint": "next lint",
     "prettier": "npx prettier . --write",
     "prettier:check": "npx prettier . --check",
-    "prepare": "husky"
+    "prepare": "husky",
+    "test": "vitest  --coverage.enabled true",
+    "test:ui": "vitest --ui --coverage.enabled true",
+    "backend": "json-server --watch backend/db.json --port 8080"
   },
   "dependencies": {
-    "next": "15.0.3",
-    "react": "19.0.0-rc-66855b96-20241106",
-    "react-dom": "19.0.0-rc-66855b96-20241106"
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/react": "^16.1.0",
+    "@types/bcrypt": "^5.0.2",
+    "@vitejs/plugin-react": "^4.3.4",
+    "@vitest/coverage-v8": "^2.1.8",
+    "bcrypt": "^5.1.1",
+    "bcrypt-ts": "^5.0.3",
+    "jose": "^5.9.6",
+    "json-server": "^1.0.0-beta.3",
+    "next": "^15.1.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "vite-tsconfig-paths": "^5.1.4",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "eslint": "^8",
-    "eslint-config-next": "15.0.3",
+    "@types/node": "^20.17.10",
+    "@types/react": "^18.3.16",
+    "@types/react-dom": "^18.3.5",
+    "@vitest/ui": "^2.1.8",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "^15.0.3",
     "husky": "^9.1.7",
+    "jsdom": "^25.0.1",
     "lint-staged": "^15.2.10",
-    "prettier": "3.4.2",
-    "typescript": "^5"
+    "prettier": "^3.4.2",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"
