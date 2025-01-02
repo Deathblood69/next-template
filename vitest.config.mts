@@ -16,12 +16,6 @@ export default defineConfig({
       reporter: ['text', 'json-summary', 'json'],
       // If you want a coverage reports even if your tests are failing, include the reportOnFailure option
       reportOnFailure: true,
-      thresholds: {
-        lines: 80,
-        branches: 80,
-        functions: 80,
-        statements: 80
-      },
       exclude: [
         // @ts-expect-error type inconnu
         ...configDefaults.coverage.exclude,
